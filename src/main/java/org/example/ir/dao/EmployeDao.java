@@ -9,7 +9,7 @@ import java.util.List;
 
 @Repository
 public interface EmployeDao extends JpaRepository<Employe,Long> {
-
+   List <Employe> findBySocieteId(Long id);
 
     Employe findById(long id);
     @Transactional

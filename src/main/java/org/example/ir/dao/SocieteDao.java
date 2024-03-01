@@ -9,5 +9,6 @@ public interface SocieteDao extends JpaRepository<Societe, Long> {
 
     Societe findByIce(String ice);
     int deleteByIce(String ice);
+    Societe findById(long id);
 
 }

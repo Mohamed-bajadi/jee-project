@@ -1,8 +1,10 @@
 package org.example.ir.service.Impl;
 
 import org.example.ir.bean.Employe;
+import org.example.ir.bean.Societe;
 import org.example.ir.dao.EmployeDao;
 import org.example.ir.service.facade.EmployeService;
+import org.example.ir.service.facade.SocieteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,6 +15,8 @@ import java.util.List;
 public class EmployeServiceImpl implements EmployeService {
     @Autowired
     private EmployeDao employeDao;
+    @Autowired
+    private SocieteService service;
 
     @Override
     public Employe findById(long id) {
@@ -39,7 +43,22 @@ public class EmployeServiceImpl implements EmployeService {
         return employeDao.findAll();
     }
 
+    public List<Employe> findBySocieteId(long societeId) {
+        Societe societe = service.findById(societeId);
+        if (societe == null) {
+            return null;
+        }
+        List<Employe> employes = employeDao.findBySocieteId(societe.getId());
+        if (employes.isEmpty()) {
 
+            return null;
+        }
+        for (Employe employe : employes) {
+            System.out.println("Employe: " + employe.getFirstname() + " " + employe.getLastname());
+        }
+
+        return employes;
+}
 
     @Override
 

@@ -1,6 +1,6 @@
 package org.example.ir.dao;
 
-import org.example.ir.bean.PaiementIrDetail;
+
 import org.example.ir.bean.TauxIr;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

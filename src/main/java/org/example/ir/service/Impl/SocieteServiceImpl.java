@@ -9,8 +9,13 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class SocieteServiceImpl implements SocieteService {
-
     private @Autowired SocieteDao dao;
+    @Override
+    public Societe findById(long id) {
+        return dao.findById(id);
+    }
+
+
 
     @Override
     public Societe findByIce(String ice) {
@@ -32,4 +37,7 @@ public class SocieteServiceImpl implements SocieteService {
             return 1;
         }
     }
+
+
+
 }

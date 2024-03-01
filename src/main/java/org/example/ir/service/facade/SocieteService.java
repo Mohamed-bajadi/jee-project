@@ -9,4 +9,6 @@ public interface SocieteService {
     int deleteByIce(String ice);
 
     int save(Societe s);
+
+    Societe findById(long societeId);
 }
