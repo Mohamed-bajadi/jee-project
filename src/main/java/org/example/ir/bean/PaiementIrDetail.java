@@ -86,5 +86,6 @@ public class PaiementIrDetail {
     public void setEmploye(Employe employe) {
         this.employe = employe;
     }
+
 }
 

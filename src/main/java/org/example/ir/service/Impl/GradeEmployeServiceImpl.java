@@ -31,7 +31,7 @@ public class GradeEmployeServiceImpl implements GradeEmployeService {
         }else if(gradeEmploye.getLibelle()==null){
             return -2;
         }else
-         gradeEmployeDao.save(gradeEmploye);
+            gradeEmployeDao.save(gradeEmploye);
         return 1;
     }
     @Override
@@ -39,3 +39,4 @@ public class GradeEmployeServiceImpl implements GradeEmployeService {
         return gradeEmployeDao.findAll();
     }
 }
+
