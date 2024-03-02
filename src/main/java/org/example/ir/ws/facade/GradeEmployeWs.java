@@ -12,28 +12,28 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/paiemnetdetail")
+@RequestMapping("/api/paiemnetdetail/")
 public class GradeEmployeWs {
     @Autowired
     private GradeEmployeService gradeEmployeService;
     @Autowired
     private GradeEmployeConverter converter;
-    @GetMapping("/code/{code}")
+    @GetMapping("code/{code}")
     public GradeEmployeDto findByCode(@PathVariable String code){
         GradeEmploye gradeEmploye= gradeEmployeService.findByCode(code);
         return converter.toDto(gradeEmploye);
     }
     @Transactional
-    @DeleteMapping("/code/{code}")
+    @DeleteMapping("code/{code}")
     public int deletByCode(@PathVariable String code) {
         return gradeEmployeService.deletByCode(code);
     }
-    @PostMapping("/")
+    @PostMapping()
     public int save(@RequestBody GradeEmployeDto dto) {
         GradeEmploye gradeEmploye=converter.toBean(dto);
         return gradeEmployeService.save(gradeEmploye);
     }
-    @GetMapping("/")
+    @GetMapping()
     public List<GradeEmployeDto> findAll() {
         List<GradeEmploye> all=gradeEmployeService.findAll();
         return converter.toDto(all);
