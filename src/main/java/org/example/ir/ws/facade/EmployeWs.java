@@ -2,6 +2,7 @@ package org.example.ir.ws.facade;
 
 import org.example.ir.bean.Employe;
 import org.example.ir.service.Impl.EmployeServiceImpl;
+import org.example.ir.service.facade.EmployeService;
 import org.example.ir.ws.converter.EmployeConverter;
 import org.example.ir.ws.dto.EmployeDto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,5 +43,5 @@ public class EmployeWs {
     }
 
     @Autowired
-    private EmployeServiceImpl service;
+    private EmployeService service;
 }

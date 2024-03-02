@@ -2,6 +2,7 @@ package org.example.ir.ws.facade;
 
 import org.example.ir.bean.TaxeLotiessment;
 import org.example.ir.service.Impl.TaxeLotissementServiceImpl;
+import org.example.ir.service.facade.TaxeLotissementService;
 import org.example.ir.ws.converter.TaxeLotissementConverter;
 import org.example.ir.ws.dto.TaxeLotissementDto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ import java.util.List;
 @RequestMapping("/api/taxeLotissement/")
 public class TaxeLotissementWs {
     @Autowired
-    private TaxeLotissementServiceImpl service;
+    private TaxeLotissementService service;
     @Autowired
     private TaxeLotissementConverter converter;
 @GetMapping("/ref/{ref}")

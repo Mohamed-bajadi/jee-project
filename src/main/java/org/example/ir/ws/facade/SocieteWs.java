@@ -1,6 +1,7 @@
 package org.example.ir.ws.facade;
 
 import org.example.ir.bean.Societe;
+import org.example.ir.service.facade.SocieteService;
 import org.example.ir.service.impl.SocieteServiceImpl;
 import org.example.ir.ws.converter.SocieteConverter;
 import org.example.ir.ws.dto.SocieteDto;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("api/societe")
 public class SocieteWs {
     @Autowired
-    private SocieteServiceImpl service;
+    private SocieteService service;
     @Autowired
     private SocieteConverter converter;
 

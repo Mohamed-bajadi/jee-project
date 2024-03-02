@@ -1,7 +1,7 @@
 package org.example.ir.ws.facade;
 
 import org.example.ir.bean.PaiementIr;
-import org.example.ir.service.PaiementIrService;
+import org.example.ir.service.facade.PaiementIrService;
 import org.example.ir.ws.converter.PaiementIrConverter;
 import org.example.ir.ws.dto.PaiementIrDto;
 import org.springframework.beans.factory.annotation.Autowired;
