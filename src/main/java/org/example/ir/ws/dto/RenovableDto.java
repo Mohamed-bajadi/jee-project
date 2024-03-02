@@ -1,13 +1,6 @@
-package org.example.ir.bean;
+package org.example.ir.ws.dto;
 
-
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-
-@Entity
-public class Renovable {
-    @Id
+public class RenovableDto {
     private Long Id;
     private String cim;
     private String nom;
@@ -44,5 +37,4 @@ public class Renovable {
     public void setPrenom(String prenom) {
         this.prenom = prenom;
     }
-
 }
