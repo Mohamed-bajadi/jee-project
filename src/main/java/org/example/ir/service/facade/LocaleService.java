@@ -1,9 +1,9 @@
 package org.example.ir.service.facade;
 
+import org.example.ir.bean.Locale;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.Locale;
 
 public interface LocaleService {
     Locale findById(long id);

@@ -36,5 +36,4 @@ public class LocaleConverter {
     public List<LocaleDto> toDto(List<Locale> beans) {
         return beans.stream().map(this::toDto).collect(Collectors.toList());
     }
-
 }

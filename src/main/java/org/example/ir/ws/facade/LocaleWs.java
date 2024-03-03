@@ -1,15 +1,15 @@
 package org.example.ir.ws.facade;
 
+import org.example.ir.bean.Locale;
 import org.example.ir.service.Impl.LocaleServiceImpl;
 import org.example.ir.ws.converter.LocaleConverter;
-import org.example.ir.ws.dto.EmployeDto;
+
 import org.example.ir.ws.dto.LocaleDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Locale;
 
 
 @RestController
@@ -31,7 +31,7 @@ public class LocaleWs {
         return service.deleteById(id);
     }
     @GetMapping("/ref/{ref}")
-    public List<EmployeDto> findByRef(@PathVariable String ref) {
+    public List<LocaleDto> findByRef(@PathVariable String ref) {
         List<Locale> locales = service.findByRef(ref) ;
         return converter.toDto(locales) ;
     }
