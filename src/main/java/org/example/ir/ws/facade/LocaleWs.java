@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Locale;
 
+
 @RestController
 @RequestMapping("/api/locale")
 public class LocaleWs {
@@ -34,18 +35,10 @@ public class LocaleWs {
         List<Locale> locales = service.findByRef(ref) ;
         return converter.toDto(locales) ;
     }
-    @GetMapping("")
-
-    public List<LocaleDto> findAll() {
-        List<Locale> all = service.findAll();
-        return converter.toDto(all);
-    }
 
     @PostMapping("")
     public int save(@RequestBody LocaleDto localeDto) {
         Locale locale = converter.toBean(localeDto);
         return service.save(locale);
     }
-
-
 }

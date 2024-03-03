@@ -13,7 +13,6 @@ public interface LocaleService {
 
     List<Locale> findByRef(String Ref);
 
-    List<Locale> findAll();
 
     int save(Locale locale);
 }
