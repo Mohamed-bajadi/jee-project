@@ -21,12 +21,7 @@ public class LocaleServiceImpl implements LocaleService {
     public List<Locale> findByRef(String Ref) {
         return null;
     }
-
-    @Override
-    public List<Locale> findAll() {
-        return null;
-    }
-
+    
     @Override
     public int save(Locale locale) {
         return 0;
