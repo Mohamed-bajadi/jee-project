@@ -9,5 +9,5 @@ public interface TauxIrService {
 
     int deleteById(int id );
 
-    TauxIr findById(Long id);
+    int save(TauxIr tauxIr);
 }
