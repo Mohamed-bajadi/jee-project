@@ -1,19 +1,28 @@
-package org.example.ir.bean;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import java.time.LocalDate;
-@Entity
-public class TauxIr {
+package org.example.ir.ws.dto;
 
-    @Id
-    private Long id;
-    private double salaireMin;
+import java.time.LocalDate;
+
+public class TauxIrDto {
+    private long id;
     private double salaireMax;
+    private double salaireMin;
     private double pourcentage;
     private LocalDate dateMin;
     private LocalDate dateMax;
     private double cotisationPatronal;
     private double cotisationSalarial;
+
+    public LocalDate getDateMax() {
+        return dateMax;
+    }
+
+    public void setDateMax(LocalDate dateMax) {
+        this.dateMax = dateMax;
+    }
+
+    public void setDateMin(LocalDate dateMin) {
+        this.dateMin = dateMin;
+    }
 
     public double getCotisationPatronal() {
         return cotisationPatronal;
@@ -31,12 +40,12 @@ public class TauxIr {
         this.cotisationSalarial = cotisationSalarial;
     }
 
-    public double getSalaireMin() {
-        return salaireMin;
+    public long getId() {
+        return id;
     }
 
-    public void setSalaireMin(double salaireMin) {
-        this.salaireMin = salaireMin;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public double getSalaireMax() {
@@ -47,6 +56,14 @@ public class TauxIr {
         this.salaireMax = salaireMax;
     }
 
+    public double getSalaireMin() {
+        return salaireMin;
+    }
+
+    public void setSalaireMin(double salaireMin) {
+        this.salaireMin = salaireMin;
+    }
+
     public double getPourcentage() {
         return pourcentage;
     }
@@ -55,27 +72,7 @@ public class TauxIr {
         this.pourcentage = pourcentage;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public LocalDate getDateMin() {
         return dateMin;
-    }
-
-    public void setDateMin(LocalDate dateMin) {
-        this.dateMin = dateMin;
-    }
-
-    public LocalDate getDateMax() {
-        return dateMax;
-    }
-
-    public void setDateMax(LocalDate dateMax) {
-        this.dateMax = dateMax;
     }
 }
