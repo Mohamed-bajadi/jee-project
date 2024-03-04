@@ -4,7 +4,6 @@ package org.example.ir.bean;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
 
 @Entity
 public class PaiementIrDetail {
@@ -17,8 +16,8 @@ public class PaiementIrDetail {
     @ManyToOne
     private Employe employe;
     private double salaireBrute;
-    private double cotisationpatronel;
-    private double cotoisationsalarial;
+    private double cotisationPatronal;
+    private double cotoisationSalarial;
     private double salaireNet;
 
 
@@ -55,20 +54,20 @@ public class PaiementIrDetail {
         this.salaireBrute = salaireBrute;
     }
 
-    public double getCotisationpatronel() {
-        return cotisationpatronel;
+    public double getCotisationPatronal() {
+        return cotisationPatronal;
     }
 
-    public void setCotisationpatronel(double cotisationpatronel) {
-        this.cotisationpatronel = cotisationpatronel;
+    public void setCotisationPatronal(double cotisationPatronal) {
+        this.cotisationPatronal = cotisationPatronal;
     }
 
-    public double getCotoisationsalarial() {
-        return cotoisationsalarial;
+    public double getCotoisationSalarial() {
+        return cotoisationSalarial;
     }
 
-    public void setCotoisationsalarial(double cotoisationsalarial) {
-        this.cotoisationsalarial = cotoisationsalarial;
+    public void setCotoisationSalarial(double cotoisationSalarial) {
+        this.cotoisationSalarial = cotoisationSalarial;
     }
 
     public double getSalaireNet() {

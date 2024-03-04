@@ -12,8 +12,8 @@ public class PaiementIrDetailConverter{
     public PaiementIrDetail toBean(PaiementIrDetailDto dto){
         PaiementIrDetail bean = new PaiementIrDetail();
         bean.setId(dto.getId());
-        bean.setCotoisationsalarial(dto.getCotoisationsalarial());
-        bean.setCotisationpatronel(dto.getCotisationpatronel());
+        bean.setCotoisationSalarial(dto.getCotoisationsalarial());
+        bean.setCotisationPatronal(dto.getCotisationpatronel());
         bean.setPaiementIr(dto.getPaiementIr());
         bean.setSalaireBrute(dto.getSalaireBrute());
         bean.setSalaireNet(dto.getSalaireNet());
@@ -24,8 +24,8 @@ public class PaiementIrDetailConverter{
     public PaiementIrDetailDto toDto( PaiementIrDetail bean){
         PaiementIrDetailDto dto = new PaiementIrDetailDto();
         dto.setId(bean.getId());
-        dto.setCotoisationsalarial(bean.getCotoisationsalarial());
-        dto.setCotisationpatronel(bean.getCotisationpatronel());
+        dto.setCotoisationsalarial(bean.getCotoisationSalarial());
+        dto.setCotisationpatronel(bean.getCotisationPatronal());
         dto.setPaiementIr(bean.getPaiementIr());
         dto.setSalaireBrute(bean.getSalaireBrute());
         dto.setSalaireNet(bean.getSalaireNet());

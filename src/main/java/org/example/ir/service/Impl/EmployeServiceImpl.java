@@ -38,11 +38,11 @@ public class EmployeServiceImpl implements EmployeService {
     public List<Employe> findByFirstnameLike(String firstname) {
         return employeDao.findByFirstnameLike(firstname);
     }
-@Override
+    @Override
     public List<Employe> findAll() {
         return employeDao.findAll();
     }
-
+    @Override
     public List<Employe> findBySocieteId(long societeId) {
         Societe societe = service.findById(societeId);
         if (societe == null) {
