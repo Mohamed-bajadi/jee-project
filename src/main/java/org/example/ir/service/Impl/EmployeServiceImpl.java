@@ -43,24 +43,6 @@ public class EmployeServiceImpl implements EmployeService {
         return employeDao.findAll();
     }
 
-    public List<Employe> findBySocieteId(long societeId) {
-        Societe societe = service.findById(societeId);
-        if (societe == null) {
-            return null;
-        }
-        List<Employe> employes = employeDao.findBySocieteId(societe.getId());
-
-        if (employes.isEmpty()) {
-
-            return null;
-        }
-        for (Employe employe : employes) {
-            System.out.println("Employe: " + employe.getFirstname() + " " + employe.getLastname());
-        }
-
-        return employes;
-}
-
     @Override
 
     public int save(Employe emp) {

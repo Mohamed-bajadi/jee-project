@@ -12,7 +12,6 @@ public interface PaiementIrDetailService {
 
     PaiementIrDetail findById(long id);
 
-    List<PaiementIrDetail> findByMonthAndYear(int month, int year);
 
     List<PaiementIrDetail> findAll();
 

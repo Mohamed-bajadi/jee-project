@@ -11,8 +11,10 @@ public interface GradeEmployeService {
     GradeEmploye findByCode(String code);
 
 
-@Transactional
-    int deletByCode(String code);
+
+
+    @Transactional
+    int deleteByCode(String code);
 
     int save(GradeEmploye gradeEmploye);
 

@@ -1,10 +1,11 @@
 package org.example.ir.bean;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
 
 import java.time.LocalDate;
-
+@Entity
 public class TaxeLotiessment {
     @OneToOne
     private Renovable renovable;

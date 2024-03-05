@@ -53,10 +53,7 @@ public class PaiementIrDetailServiceImpl implements PaiementIrDetailService {
         return paiementIrDetailDao.findById(id);
     }
 
-    @Override
-    public List<PaiementIrDetail> findByMonthAndYear(int month, int year) {
-        return paiementIrDetailDao.findByMonthAndYear(month, year);
-    }
+
 
     @Override
     public List<PaiementIrDetail> findAll() {

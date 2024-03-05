@@ -15,14 +15,14 @@ public class GradeEmployeServiceImpl implements GradeEmployeService {
     private GradeEmployeDao gradeEmployeDao;
 
     @Override
-    @Transactional
     public GradeEmploye findByCode(String code) {
         return gradeEmployeDao.findByCode(code);
     }
 
     @Override
-    public int deletByCode(String code) {
-        return gradeEmployeDao.deletByCode(code);
+    @Transactional
+    public int deleteByCode(String code) {
+        return gradeEmployeDao.deleteByCode(code);
     }
     @Override
     public int save(GradeEmploye gradeEmploye) {
