@@ -4,18 +4,16 @@ import org.example.ir.bean.Renovable;
 import org.example.ir.service.facade.RenovableService;
 import org.example.ir.ws.converter.RenovableConverter;
 import org.example.ir.ws.dto.RenovableDto;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/renovable")
 public class RenovableWs {
-    private final RenovableService service;
-    private final RenovableConverter converter;
+    private @Autowired RenovableService service;
+    private @Autowired RenovableConverter converter;
 
-    public RenovableWs(RenovableService service, RenovableConverter converter) {
-        this.service = service;
-        this.converter = converter;
-    }
+
     @GetMapping("id/{id}")
     public RenovableDto findById(@PathVariable Long id){
         Renovable bean = service.findById(id);
