@@ -4,6 +4,8 @@ import org.example.ir.bean.Renovable;
 import org.springframework.stereotype.Service;
 
 
+
+
 public interface RenovableService {
     Renovable findById(Long id);
     int deleteById(Long id);
