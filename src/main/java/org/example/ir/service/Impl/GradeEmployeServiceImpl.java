@@ -2,7 +2,6 @@ package org.example.ir.service.Impl;
 
 import org.example.ir.bean.GradeEmploye;
 import org.example.ir.dao.GradeEmployeDao;
-import org.example.ir.service.facade.GradeEmployeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -10,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-public class GradeEmployeServiceImpl implements GradeEmployeService {
+public class GradeEmployeServiceImpl implements org.example.ir.service.facade.GradeEmployeService {
     @Autowired
     private GradeEmployeDao gradeEmployeDao;
 
@@ -31,7 +30,7 @@ public class GradeEmployeServiceImpl implements GradeEmployeService {
         }else if(gradeEmploye.getLibelle()==null){
             return -2;
         }else
-         gradeEmployeDao.save(gradeEmploye);
+            gradeEmployeDao.save(gradeEmploye);
         return 1;
     }
     @Override
@@ -39,3 +38,4 @@ public class GradeEmployeServiceImpl implements GradeEmployeService {
         return gradeEmployeDao.findAll();
     }
 }
+

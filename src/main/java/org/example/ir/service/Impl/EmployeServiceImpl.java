@@ -38,10 +38,31 @@ public class EmployeServiceImpl implements EmployeService {
     public List<Employe> findByFirstnameLike(String firstname) {
         return employeDao.findByFirstnameLike(firstname);
     }
-@Override
+    @Override
     public List<Employe> findAll() {
         return employeDao.findAll();
     }
+<<<<<<< HEAD
+=======
+    @Override
+    public List<Employe> findBySocieteId(long societeId) {
+        Societe societe = service.findById(societeId);
+        if (societe == null) {
+            return null;
+        }
+        List<Employe> employes = employeDao.findBySocieteId(societe.getId());
+
+        if (employes.isEmpty()) {
+
+            return null;
+        }
+        for (Employe employe : employes) {
+            System.out.println("Employe: " + employe.getFirstname() + " " + employe.getLastname());
+        }
+
+        return employes;
+}
+>>>>>>> 87810a16659f0ab283ac81a4055df292f81e1bc2
 
     @Override
 

@@ -11,6 +11,7 @@ import org.example.ir.service.facade.TauxIrService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -36,11 +37,12 @@ public class PaiementIrDetailServiceImpl implements PaiementIrDetailService {
         }
         double salaireBrut = paiementIrDetail.getSalaireBrute();
         double pourcentageIr = tauxIr.getPourcentage() / 100.0;
-        double cotisationPatronale = salaireBrut * paiementIrDetail.getCotisationpatronel();
-        double cotisationSalariale = salaireBrut * paiementIrDetail.getCotoisationsalarial();
+        double cotisationPatronale = salaireBrut * paiementIrDetail.getTauxIr().getCotisationPatronal();
+        double cotisationSalariale = salaireBrut * paiementIrDetail.getTauxIr().getCotisationSalarial();
         double salaireNet = salaireBrut * (1 - pourcentageIr) - cotisationSalariale;
-        paiementIrDetail.setCotisationpatronel(cotisationPatronale);
-        paiementIrDetail.setCotoisationsalarial(cotisationSalariale);
+        paiementIrDetail.setEmploye(employe);
+        paiementIrDetail.setCotisationPatronal(cotisationPatronale);
+        paiementIrDetail.setCotoisationSalarial(cotisationSalariale);
         paiementIrDetail.setSalaireNet(salaireNet);
         paiementIrDetailDao.save(paiementIrDetail);
         return 1;
@@ -48,7 +50,6 @@ public class PaiementIrDetailServiceImpl implements PaiementIrDetailService {
     }
 
     @Override
-
     public PaiementIrDetail findById(long id) {
         return paiementIrDetailDao.findById(id);
     }

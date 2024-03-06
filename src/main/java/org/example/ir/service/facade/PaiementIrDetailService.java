@@ -15,7 +15,8 @@ public interface PaiementIrDetailService {
 
     List<PaiementIrDetail> findAll();
 
-   void update(PaiementIrDetail paiementIrDetail);
+
+    void update(PaiementIrDetail paiementIrDetail);
     @Transactional
     int deleteById(long id);
 }
