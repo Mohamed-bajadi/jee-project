@@ -1,5 +1,8 @@
 package org.example.ir.ws.dto;
 
+import org.springframework.stereotype.Component;
+
+
 public class RenovableDto {
     private Long Id;
     private String cim;
