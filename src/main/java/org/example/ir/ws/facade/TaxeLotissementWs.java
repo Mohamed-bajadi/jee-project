@@ -1,7 +1,6 @@
 package org.example.ir.ws.facade;
 
 import org.example.ir.bean.TaxeLotiessment;
-import org.example.ir.service.Impl.TaxeLotissementServiceImpl;
 import org.example.ir.service.facade.TaxeLotissementService;
 import org.example.ir.ws.converter.TaxeLotissementConverter;
 import org.example.ir.ws.dto.TaxeLotissementDto;
@@ -12,7 +11,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/taxeLotissement/")
+@RequestMapping("/api/taxeLotissement")
 public class TaxeLotissementWs {
     @Autowired
     private TaxeLotissementService service;
@@ -32,7 +31,7 @@ public class TaxeLotissementWs {
     TaxeLotiessment taxeLotiessment = service.findByDateDePresentationAfter(date);
     return converter.toDto(taxeLotiessment);
     }
-@GetMapping
+@GetMapping("/")
     public List<TaxeLotissementDto> findAll() {
         List<TaxeLotiessment> all = service.findAll();
         return converter.toDto(all);

@@ -1,10 +1,9 @@
 package org.example.ir.ws.facade;
 
-import org.example.ir.bean.Societe;
+
 import org.example.ir.bean.TauxIr;
 import org.example.ir.service.facade.TauxIrService;
 import org.example.ir.ws.converter.TauxIrConverter;
-import org.example.ir.ws.dto.SocieteDto;
 import org.example.ir.ws.dto.TauxIrDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

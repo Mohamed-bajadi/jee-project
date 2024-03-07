@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/renovable")
+@RequestMapping("/api/renovable/")
 public class RenovableWs {
 
     private @Autowired RenovableService service;
@@ -24,7 +24,7 @@ public class RenovableWs {
     @DeleteMapping("id/{id}")
     public int deleteById(@PathVariable Long id){return service.deleteById(id);}
 
-    @PostMapping("/")
+    @PostMapping()
     public int save(@RequestBody RenovableDto dto) {
         Renovable bean = converter.toBean(dto);
         return service.save(bean);

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/paiemnetdetail/")
+@RequestMapping("/api/paiemenetDetail/")
 public class PaiementIrDetailWs {
     @Autowired
     private PaiementIrDetailService service;
@@ -19,8 +19,8 @@ public class PaiementIrDetailWs {
    private  PaiementIrDetailConverter converter;
     @PostMapping()
     public int save(@RequestBody PaiementIrDetailDto dto) {
-        PaiementIrDetail paiementIrDetail=converter.toBean(dto);
-        return service.save(paiementIrDetail);
+        PaiementIrDetail paiementIrD=converter.toBean(dto);
+        return service.save(paiementIrD);
     }
 
     @GetMapping("id/{id}")
@@ -28,11 +28,7 @@ public class PaiementIrDetailWs {
         PaiementIrDetail paiementIrDetail= service.findById(id);
         return converter.toDto(paiementIrDetail);
     }
-    @GetMapping("month/{month}/year/{year}")
-    public List<PaiementIrDetailDto> findByMonthAndYear(@PathVariable int month,@PathVariable int year) {
-        List<PaiementIrDetail> list =service.findByMonthAndYear(month, year);
-        return converter.toDto(list);
-    }
+
     @GetMapping()
     public List<PaiementIrDetailDto> findAll() {
         List<PaiementIrDetail> all = service.findAll();

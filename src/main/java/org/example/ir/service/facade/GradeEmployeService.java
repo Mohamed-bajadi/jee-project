@@ -10,9 +10,6 @@ public interface GradeEmployeService {
 
     GradeEmploye findByCode(String code);
 
-
-
-
     @Transactional
     int deleteByCode(String code);
 

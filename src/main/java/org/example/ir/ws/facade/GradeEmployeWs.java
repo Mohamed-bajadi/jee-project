@@ -25,8 +25,8 @@ public class GradeEmployeWs {
     }
     @Transactional
     @DeleteMapping("code/{code}")
-    public int deletByCode(@PathVariable String code) {
-        return gradeEmployeService.deletByCode(code);
+    public int deleteByCode(@PathVariable String code) {
+        return gradeEmployeService.deleteByCode(code);
     }
     @PostMapping()
     public int save(@RequestBody GradeEmployeDto dto) {

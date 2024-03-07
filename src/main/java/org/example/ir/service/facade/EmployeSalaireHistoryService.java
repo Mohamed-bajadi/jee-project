@@ -11,7 +11,6 @@ public interface EmployeSalaireHistoryService {
 
     EmployeSalaireHistory findByEmployeId(Long id);
 
-
     List<EmployeSalaireHistory> findAll();
 
     int save(EmployeSalaireHistory employeSalaireHistory);

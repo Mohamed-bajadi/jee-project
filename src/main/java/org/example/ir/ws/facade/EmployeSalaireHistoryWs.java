@@ -12,22 +12,22 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/employeSalaireHistory")
+@RequestMapping("/api/employeSalaireHistory/")
 public class EmployeSalaireHistoryWs {
     @Autowired
     private EmployeSalaireHistoryConverter converter;
-@GetMapping("/id/{id}")
+@GetMapping("id/{id}")
     public EmployeSalaireHistoryDto findByEmployeId(@PathVariable Long id) {
     EmployeSalaireHistory byEmployeId = service.findByEmployeId(id);
     return converter.toDto(byEmployeId);
 }
-@GetMapping
+@GetMapping("/")
 
     public List<EmployeSalaireHistoryDto> findAll() {
     List<EmployeSalaireHistory> all = service.findAll();
     return converter.toDto(all);
 }
-@PostMapping
+@PostMapping("/")
     public int save(@RequestBody EmployeSalaireHistoryDto employeSalaireHistory) {
         return service.save(converter.toBean(employeSalaireHistory));
     }
