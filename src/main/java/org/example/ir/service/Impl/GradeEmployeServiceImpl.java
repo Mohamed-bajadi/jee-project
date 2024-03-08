@@ -21,8 +21,8 @@ public class GradeEmployeServiceImpl implements GradeEmployeService {
     }
 
     @Override
-    public int deletByCode(String code) {
-        return gradeEmployeDao.deletByCode(code);
+    public int deleteByCode(String code) {
+        return gradeEmployeDao.deleteByCode(code);
     }
     @Override
     public int save(GradeEmploye gradeEmploye) {

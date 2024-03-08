@@ -12,7 +12,7 @@ public interface GradeEmployeService {
 
 
 @Transactional
-    int deletByCode(String code);
+    int deleteByCode(String code);
 
     int save(GradeEmploye gradeEmploye);
 

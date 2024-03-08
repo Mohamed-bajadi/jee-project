@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 public interface GradeEmployeDao extends JpaRepository<GradeEmploye, Long> {
 
     GradeEmploye findByCode( String code);
-    int deletByCode( String code);
+    int deleteByCode( String code);
 
 
 

@@ -11,7 +11,6 @@ public class RenovableServiceImpl implements RenovableService {
     public RenovableServiceImpl(RenovableDao dao) {
         this.dao = dao;
     }
-
     @Override
     public Renovable findById(Long id) {
         return dao.findRenovableById(id);

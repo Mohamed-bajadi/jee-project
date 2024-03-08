@@ -11,7 +11,6 @@ import java.util.List;
 public interface PaiementIrDetailDao extends JpaRepository<PaiementIrDetail,Long> {
     int deleteById(long id);
     PaiementIrDetail findById(long id);
-    List<PaiementIrDetail> findByMonthAndYear(int month, int year);
 
 
 }
