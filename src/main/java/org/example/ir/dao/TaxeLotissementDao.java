@@ -7,8 +7,9 @@ import org.springframework.stereotype.Repository;
 import java.time.LocalDate;
 
 @Repository
-public interface TaxeLotissementDao extends JpaRepository<TaxeLotiessment,Long> {
+public interface TaxeLotissementDao extends JpaRepository<TaxeLotiessment, Long> {
     TaxeLotiessment findByRef(String ref);
+
     int deleteByRef(String ref);
 
     TaxeLotiessment findByDateDePresentationAfter(LocalDate date);

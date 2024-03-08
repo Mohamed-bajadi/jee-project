@@ -2,10 +2,11 @@ package org.example.ir.ws.converter;
 
 import org.example.ir.bean.Renovable;
 import org.example.ir.ws.dto.RenovableDto;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
+@Component
 public class RenovableConverter {
 
     public Renovable toBean(RenovableDto dto){
