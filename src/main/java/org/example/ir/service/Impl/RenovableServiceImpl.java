@@ -8,7 +8,10 @@ import org.springframework.stereotype.Service;
 
 @Service
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> efdcd1be644e6e7787ea751540e66fb66edad8cb
 public class RenovableServiceImpl implements RenovableService {
     private final RenovableDao dao;
     public RenovableServiceImpl(RenovableDao dao) {

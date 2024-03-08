@@ -42,7 +42,10 @@ public class EmployeServiceImpl implements EmployeService {
         return employeDao.findAll();
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> efdcd1be644e6e7787ea751540e66fb66edad8cb
     @Override
 
     public int save(Employe emp) {

@@ -10,6 +10,12 @@ public interface GradeEmployeService {
 
     GradeEmploye findByCode(String code);
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> efdcd1be644e6e7787ea751540e66fb66edad8cb
     @Transactional
     int deleteByCode(String code);
 
