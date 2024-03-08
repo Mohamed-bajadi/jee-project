@@ -10,20 +10,20 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@RequestMapping("/api/taux-ir")
+@RequestMapping("/api/taux-ir/")
 public class TauxIrWs {
     @Autowired
     private TauxIrService service;
     @Autowired
     private TauxIrConverter converter;
 
-    @GetMapping("/id/{id}")
+    @GetMapping("id/{id}")
     public TauxIrDto findById(@PathVariable long id) {
         TauxIr tauxIr = service.findById(id);
         return converter.toDto(tauxIr);
     }
 
-    @DeleteMapping("/id/{id}")
+    @DeleteMapping("id/{id}")
     public int deleteById(@PathVariable int id) {
 
         return service.deleteById(id);
