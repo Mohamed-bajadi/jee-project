@@ -12,19 +12,11 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/renovable/")
 public class RenovableWs {
-<<<<<<< HEAD
-
-    private @Autowired RenovableService service;
-    private @Autowired RenovableConverter converter;
-
-=======
     @Autowired
     private  RenovableService service;
     @Autowired
     private  RenovableConverter converter;
-
-
->>>>>>> efdcd1be644e6e7787ea751540e66fb66edad8cb
+    
     @GetMapping("id/{id}")
     public RenovableDto findById(@PathVariable Long id){
         Renovable bean = service.findById(id);
