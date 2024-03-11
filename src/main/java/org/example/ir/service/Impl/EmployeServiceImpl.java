@@ -38,24 +38,19 @@ public class EmployeServiceImpl implements EmployeService {
     public List<Employe> findByFirstnameLike(String firstname) {
         return employeDao.findByFirstnameLike(firstname);
     }
-@Override
+    @Override
     public List<Employe> findAll() {
         return employeDao.findAll();
     }
 
+    @Override
+    public List<Employe> findBySocieteId(long societeId) {
+        return null;
+    }
 
     @Override
-
     public int save(Employe emp) {
-        if (findById(emp.getId()) != null) {
-            return -1;
-        } else if (emp.getFirstname()==null && emp.getLastname()==null) {
-            return -2 ;
-        }else
-        {
-            employeDao.save(emp);
-            return 1;
-        }
+        return 0;
     }
 
 
