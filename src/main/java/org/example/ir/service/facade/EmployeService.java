@@ -16,4 +16,6 @@ public interface EmployeService {
     List<Employe> findAll();
 
     int save(Employe emp);
+
+    List<Employe> findEmployeBySocieteId(Long id);
 }

@@ -1,7 +1,7 @@
 package org.example.ir.ws.facade;
 
 import org.example.ir.bean.Locale;
-import org.example.ir.service.Impl.LocaleServiceImpl;
+import org.example.ir.service.impl.LocaleServiceImpl;
 import org.example.ir.ws.converter.LocaleConverter;
 
 import org.example.ir.ws.dto.LocaleDto;

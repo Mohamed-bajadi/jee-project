@@ -1,16 +1,16 @@
 package org.example.ir.service.facade;
 
-import org.example.ir.bean.TaxeLotiessment;
+import org.example.ir.bean.TaxeLotissement;
 
 import java.time.LocalDate;
 import java.util.List;
 
 public interface TaxeLotissementService {
-    TaxeLotiessment findByRef(String ref);
+    TaxeLotissement findByRef(String ref);
 
     int deleteByRef(String ref);
 
-    TaxeLotiessment findByDateDePresentationAfter(LocalDate date);
+    TaxeLotissement findByDateDePresentationAfter(LocalDate date);
 
-    List<TaxeLotiessment> findAll();
+    List<TaxeLotissement> findAll();
 }

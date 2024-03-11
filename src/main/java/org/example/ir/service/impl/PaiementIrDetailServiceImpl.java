@@ -1,4 +1,4 @@
-package org.example.ir.service.Impl;
+package org.example.ir.service.impl;
 
 import jakarta.transaction.Transactional;
 import org.example.ir.bean.Employe;

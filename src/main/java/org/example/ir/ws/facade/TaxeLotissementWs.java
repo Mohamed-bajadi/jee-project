@@ -1,7 +1,6 @@
 package org.example.ir.ws.facade;
 
-import org.example.ir.bean.TaxeLotiessment;
-import org.example.ir.service.Impl.TaxeLotissementServiceImpl;
+import org.example.ir.bean.TaxeLotissement;
 import org.example.ir.service.facade.TaxeLotissementService;
 import org.example.ir.ws.converter.TaxeLotissementConverter;
 import org.example.ir.ws.dto.TaxeLotissementDto;
@@ -20,7 +19,7 @@ public class TaxeLotissementWs {
     private TaxeLotissementConverter converter;
 @GetMapping("/ref/{ref}")
     public TaxeLotissementDto findByRef(@PathVariable String ref) {
-    TaxeLotiessment byRef = service.findByRef(ref);
+    TaxeLotissement byRef = service.findByRef(ref);
     return converter.toDto(byRef);
     }
 @DeleteMapping("/ref/{ref}")
@@ -29,12 +28,12 @@ public class TaxeLotissementWs {
     }
 @GetMapping("/date/{date}")
     public TaxeLotissementDto findByDateDePresentationAfter(@PathVariable LocalDate date) {
-    TaxeLotiessment taxeLotiessment = service.findByDateDePresentationAfter(date);
+    TaxeLotissement taxeLotiessment = service.findByDateDePresentationAfter(date);
     return converter.toDto(taxeLotiessment);
     }
 @GetMapping
     public List<TaxeLotissementDto> findAll() {
-        List<TaxeLotiessment> all = service.findAll();
+        List<TaxeLotissement> all = service.findAll();
         return converter.toDto(all);
     }
 }

@@ -1,6 +1,6 @@
-package org.example.ir.service.Impl;
+package org.example.ir.service.impl;
 
-import org.example.ir.bean.TaxeLotiessment;
+import org.example.ir.bean.TaxeLotissement;
 import org.example.ir.dao.TaxeLotissementDao;
 
 import org.example.ir.service.facade.TaxeLotissementService;
@@ -15,7 +15,7 @@ public class TaxeLotissementServiceImpl implements TaxeLotissementService {
     @Autowired
     private TaxeLotissementDao taxeLotissmentDao;
     @Override
-    public TaxeLotiessment findByRef(String ref) {
+    public TaxeLotissement findByRef(String ref) {
         return taxeLotissmentDao.findByRef(ref);
     }
 @Override
@@ -23,11 +23,11 @@ public class TaxeLotissementServiceImpl implements TaxeLotissementService {
         return taxeLotissmentDao.deleteByRef(ref);
     }
 @Override
-    public TaxeLotiessment findByDateDePresentationAfter(LocalDate date) {
+    public TaxeLotissement findByDateDePresentationAfter(LocalDate date) {
         return taxeLotissmentDao.findByDateDePresentationAfter(date);
     }
 @Override
-    public List<TaxeLotiessment> findAll() {
+    public List<TaxeLotissement> findAll() {
         return taxeLotissmentDao.findAll();
     }
 

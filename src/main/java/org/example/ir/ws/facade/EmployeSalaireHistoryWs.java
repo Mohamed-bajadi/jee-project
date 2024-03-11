@@ -1,9 +1,7 @@
 package org.example.ir.ws.facade;
 
 import org.example.ir.bean.EmployeSalaireHistory;
-import org.example.ir.dao.EmloyeSalaireHistoryDao;
-import org.example.ir.service.Impl.EmployeSalaireHistoryServiceImpl;
-import org.example.ir.service.Impl.EmployeServiceImpl;
+import org.example.ir.service.impl.EmployeSalaireHistoryServiceImpl;
 import org.example.ir.ws.converter.EmployeSalaireHistoryConverter;
 import org.example.ir.ws.dto.EmployeSalaireHistoryDto;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,9 +1,8 @@
 package org.example.ir.bean;
 import java.time.LocalDateTime;
 import java.util.Date;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+
+import jakarta.persistence.*;
 
 
 import jakarta.persistence.Entity;
@@ -15,7 +14,7 @@ import java.time.LocalDate;
 
 @Entity
 public class PaiementIr {
-    @Id
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @CreationTimestamp
     private LocalDate datePaiementIr;

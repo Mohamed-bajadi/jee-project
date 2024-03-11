@@ -1,5 +1,5 @@
 
-package org.example.ir.service.Impl;
+package org.example.ir.service.impl;
 import org.example.ir.bean.PaiementIr;
 import org.example.ir.dao.PaiementIrDao;
 import org.example.ir.service.facade.PaiementIrService;
