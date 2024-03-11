@@ -1,13 +1,17 @@
 package org.example.ir.bean;
 
 
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 
+import jakarta.persistence.*;
+
+
 @Entity
 public class PaiementIrDetail {
-    @Id
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
     private PaiementIr paiementIr;

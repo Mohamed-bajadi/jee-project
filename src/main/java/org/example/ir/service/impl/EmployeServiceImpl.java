@@ -1,4 +1,4 @@
-package org.example.ir.service.Impl;
+package org.example.ir.service.impl;
 
 import org.example.ir.bean.Employe;
 import org.example.ir.bean.Societe;
@@ -23,11 +23,7 @@ public class EmployeServiceImpl implements EmployeService {
         return employeDao.findById(id);
     }
 
-
-
-
     @Override
-
 
     @Transactional
     public int deleteById(long id) {
@@ -43,15 +39,31 @@ public class EmployeServiceImpl implements EmployeService {
         return employeDao.findAll();
     }
 
-    @Override
-    public List<Employe> findBySocieteId(long societeId) {
-        return null;
-    }
+
 
     @Override
     public int save(Employe emp) {
-        return 0;
+     String ice =  emp.getSociete().getIce();
+     Societe sc = service.findByIce(ice);
+        if (sc != null) {
+            service.save(sc);
+            emp.setSociete(sc);
+        }
+
+       if (findById(emp.getId()) != null) {
+            return -1;
+        } else if (emp.getFirstname()==null && emp.getLastname()==null) {
+            return -2 ;
+        }else
+        {
+
+            employeDao.save(emp);
+            return 1;
+        }
+
     }
-
-
+@Override
+    public List<Employe> findEmployeBySocieteId(Long id) {
+        return employeDao.findEmployeBySocieteId(id);
+    }
 }

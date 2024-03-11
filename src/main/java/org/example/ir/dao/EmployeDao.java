@@ -12,6 +12,7 @@ public interface EmployeDao extends JpaRepository<Employe,Long> {
     Employe findById(long id);
     @Transactional
     int deleteById(long id) ;
+    List<Employe> findEmployeBySocieteId(Long id);
 
     List<Employe> findByFirstnameLike(String firstname);
 

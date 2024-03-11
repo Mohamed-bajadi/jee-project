@@ -1,4 +1,4 @@
-package org.example.ir.service.Impl;
+package org.example.ir.service.impl;
 
 import org.example.ir.bean.GradeEmploye;
 import org.example.ir.dao.GradeEmployeDao;

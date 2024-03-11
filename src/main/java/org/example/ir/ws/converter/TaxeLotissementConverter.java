@@ -1,6 +1,6 @@
 package org.example.ir.ws.converter;
 
-import org.example.ir.bean.TaxeLotiessment;
+import org.example.ir.bean.TaxeLotissement;
 import org.example.ir.ws.dto.TaxeLotissementDto;
 import org.springframework.stereotype.Component;
 import java.util.List;
@@ -8,8 +8,8 @@ import java.util.stream.Collectors;
 
 @Component
 public class TaxeLotissementConverter {
-   public TaxeLotiessment toBean(TaxeLotissementDto dto){
-       TaxeLotiessment bean = new TaxeLotiessment();
+   public TaxeLotissement toBean(TaxeLotissementDto dto){
+       TaxeLotissement bean = new TaxeLotissement();
        bean.setId(dto.getId());
        bean.setDateDePresentation(dto.getDateDePresentation());
        bean.setRef(dto.getRef());
@@ -18,7 +18,7 @@ public class TaxeLotissementConverter {
        bean.setMontantDeBase(dto.getMontantDeBase());
        return bean;
    }
-   public TaxeLotissementDto toDto(TaxeLotiessment bean){
+   public TaxeLotissementDto toDto(TaxeLotissement bean){
        TaxeLotissementDto dto = new TaxeLotissementDto();
        dto.setId(bean.getId());
        dto.setDateDePresentation(bean.getDateDePresentation());
@@ -28,10 +28,10 @@ public class TaxeLotissementConverter {
        dto.setMontantDeBase(bean.getMontantDeBase());
        return dto;
    }
-   public List<TaxeLotiessment> toBean(List<TaxeLotissementDto> dtos){
+   public List<TaxeLotissement> toBean(List<TaxeLotissementDto> dtos){
        return dtos.stream().map(this::toBean).collect(Collectors.toList());
    }
-   public List<TaxeLotissementDto> toDto(List<TaxeLotiessment> beans){
+   public List<TaxeLotissementDto> toDto(List<TaxeLotissement> beans){
        return beans.stream().map(this::toDto).collect(Collectors.toList());
    }
 }

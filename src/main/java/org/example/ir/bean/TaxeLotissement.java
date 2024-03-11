@@ -1,20 +1,19 @@
 package org.example.ir.bean;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 @Entity
-public class TaxeLotiessment {
+public class TaxeLotissement {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     @OneToOne
     private Renovable renovable;
     private LocalDate dateDePresentation;
     private double surface;
     private double montantDeBase;
     private String ref;
-    @Id
-    private Long id;
+
 
     public Long getId() {
         return id;

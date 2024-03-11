@@ -1,11 +1,10 @@
 package org.example.ir.ws.facade;
 
 import org.example.ir.bean.TauxTaxLotissement;
-import org.example.ir.service.Impl.TauxTaxLotissementServiceImpl;
+import org.example.ir.service.impl.TauxTaxLotissementServiceImpl;
 import org.example.ir.ws.converter.TauxTaxLotissementConverter;
 import org.example.ir.ws.dto.TauxTaxLotissementDto;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
